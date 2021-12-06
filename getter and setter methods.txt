@@ -1,0 +1,45 @@
+./* Write a program will calculate the circumference, area of the circle.
+Instantiate 2 objects and use the getter and setter methods.
+ Develop the toString() method for the above Circle class and test it.*/
+
+package Pack1;
+import java.util.Scanner;
+public class Circle 
+{
+	private double r;
+	
+	public void setR(double r)
+	{
+		this.r=r;
+	}
+	
+	public double getR()
+	{
+		return r;
+	}
+	public void calculate()
+	{
+		System.out.println("Area :"+(3.14*getR()*getR()));
+		System.out.println("Circ"+2*3.4*getR());
+	}
+
+	public static void main(String[] args) 
+	{
+		Circle obj1=new Circle();
+		Circle obj2=new Circle();
+		Scanner sc=new Scanner(System.in);
+		obj1.setR(sc.nextDouble());
+		obj2.setR(sc.nextDouble());
+		System.out.println(obj1);
+		obj2.calculate();
+		
+	}
+	
+	public String toString()
+	{
+		String str;
+		str=String.format("Area : %f%n Circumference %f", (3.14*getR()*getR()),(2*3.4*getR()));
+		return str;
+	}
+
+}
